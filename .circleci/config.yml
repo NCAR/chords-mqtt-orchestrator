@@ -21,7 +21,7 @@ jobs:
 
       - run: # install and activate conda environment
           name: Install Pytest
-          command: pip install pytest
+          command: pip install pytest --user
       - run:
           command: pytest --junitxml=test-reports/junit.xml --cov=./ --verbose
 
