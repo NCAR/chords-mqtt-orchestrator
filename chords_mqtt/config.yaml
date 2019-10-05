@@ -1,0 +1,8 @@
+mqtt:
+  host: ''
+  port: ''
+  topics: []
+chords:
+  base_api_endpoint: ''
+  api_key: ''
+  email: ''
