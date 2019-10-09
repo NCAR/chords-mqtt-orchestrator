@@ -21,6 +21,20 @@ your `topics` are correct.
 If you run into trouble after installing when running, check your `~/chords_mqtt/config.yaml` and make
 sure the correct information was included in that file.
 
+An example config might look like this:
+
+```yaml
+mqtt:
+  host: yourmq.tt
+  port: 1883
+  topics: ['iotwx']
+chords:
+  base_api_endpoint: 'http://yourchor.ds'
+  api_key: '1234567890'
+  email: 'yoda@jediacadem.ie'
+```
+
+
 ### Run `setup.py` to install
 
 ```shell
