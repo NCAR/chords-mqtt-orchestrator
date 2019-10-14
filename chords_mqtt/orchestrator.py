@@ -21,6 +21,12 @@ def on_message(client, userdata, msg):
         data = yaml.load(msg.payload, Loader=yaml.FullLoader)
         sensor, measurement = data['instrument'].split('/')
 
+        if sensor == "bmp280":
+            if measurement == "pressure":
+                var = "sp1"
+            elif measurement == "temp":
+                var = "t1"
+
         if sensor == "htu21d":
             if measurement == "humidity":
                 var = "rh1"
@@ -43,6 +49,10 @@ def on_message(client, userdata, msg):
             if measurement == "altitude":
                 var = "alt1"
 
+        if sensor == "veml6070":
+            if measurement == "uv":
+                var = "uv"
+
         sensor_id = data['device'].split('/')[1]
         parameters = "sensor_id={}&{}={}&email={}&api_key={}&test" \
                         .format(sensor_id,
@@ -50,7 +60,7 @@ def on_message(client, userdata, msg):
                                 data['m'],
                                 cfg['chords']['email'],
                                 cfg['chords']['api_key'])
-
+        print(parameters)
         r = requests.get("{}/measurements/url_create?{}".format(cfg['chords']['base_api_endpoint'], parameters))
 
         if r.status_code == 200:
