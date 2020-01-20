@@ -39,7 +39,7 @@ setup(
     install_requires=install_requires,
     license='Apache 2.0',
     zip_safe=False,
-    entry_points={},
+    entry_points={'console_scripts': ['chords-orchestrator=chords_mqtt.orchestrator:main']},
     keywords='chords, mqtt, iot',
     use_scm_version={'version_scheme': 'post-release', 'local_scheme': 'dirty-tag'},
     setup_requires=['setuptools_scm', 'setuptools>=30.3.0'],

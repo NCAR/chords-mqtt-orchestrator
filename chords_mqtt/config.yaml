@@ -6,3 +6,31 @@ chords:
   base_api_endpoint: ''
   api_key: ''
   email: ''
+  
+  instruments:
+    bme680:
+      temp: 't1'
+      humidity: 'rh1'
+      pressure: 'sp1'
+      gas: 'voc1'
+      altitude: 'alt1'
+
+    bme280:
+      temp: 't2'
+      humidity: 'rh2'
+      pressure: 'sp2'
+      altitude: 'alt2'
+
+    bmp280:
+      temp: 't3'
+      pressure: 'sp3'
+
+    htu21d:
+       humidity: 'rh3'
+       temp: 't4'
+
+    mcp9808:
+      temp: 't5'
+
+    veml6070:
+      uv: 'uv1'

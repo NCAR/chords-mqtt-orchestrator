@@ -6,7 +6,7 @@ import yaml
 
 original_config_file = os.path.join(os.path.dirname(__file__), 'config.yaml')
 
-config_dir = Path('~/chords-mqtt').expanduser()
+config_dir = Path('~/chords_mqtt').expanduser()
 config_dir.mkdir(exist_ok=True, parents=True)
 
 config_file = config_dir / 'config.yaml'
