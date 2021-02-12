@@ -34,3 +34,19 @@ chords:
 
     veml6070:
       uv: 'uv1'
+
+    halleffect:
+      precipitation: 'precip'
+
+    ir:
+      anemometer: 'anemometer'
+    
+    sgp30:
+      tvoc: 'tvoc'
+      co2eq: 'co2eq'
+
+    hm330x:
+      pm1: 'pm1'
+      pm25: 'pm25'
+      pm10: 'pm10'
+
